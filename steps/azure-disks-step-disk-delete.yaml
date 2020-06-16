@@ -1,6 +1,6 @@
 apiVersion: integration/v1
 kind: Step
-name: azure-disks-delete-disks
+name: azure-disks-step-disk-delete
 version: 1
 summary: Step template
 

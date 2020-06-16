@@ -1,6 +1,6 @@
 apiVersion: integration/v1
 kind: Step
-name: azure-disks-list-disks
+name: azure-disks-step-disk-list
 version: 1
 summary: Step template
 
