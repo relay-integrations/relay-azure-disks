@@ -1,6 +1,0 @@
-apiVersion: container/v1
-kind: StepContainer
-inherit: ../hack/defs/azure-python
-title: Delete Azure Disks
-description: >
-  This task immediately deletes a set of Azure Disks.

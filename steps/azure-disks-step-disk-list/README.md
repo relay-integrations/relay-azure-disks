@@ -1,4 +1,4 @@
-# azure-disks-list-disks
+# azure-disks-step-disk-list
 
 This [Azure](https://azure.microsoft.com/en-us/services/storage/disks/) step container lists the disks
 in an Azure subscription or resource group and sets an output, `disks`, to an array of disks objects.
@@ -23,7 +23,7 @@ in an Azure subscription or resource group and sets an output, `disks`, to an ar
 steps:
 # ...
 - name: azure-disks-list-disks
-  image: projectnebula/azure-disks-list-disks
+  image: relaysh/azure-disks-step-disk-list
   spec:
     azure:
       connection: !Connection { type: azure, name: my-azure-account }

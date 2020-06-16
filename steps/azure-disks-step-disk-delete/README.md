@@ -1,4 +1,4 @@
-# azure-disks-delete-disks
+# azure-disks-step-disk-delete
 
 This [Azure](https://azure.microsoft.com/en-us/services/storage/disks/) step container deletes a set of
 Azure disks in an Azure subscription given a list of resource IDs.
@@ -22,7 +22,7 @@ None
 steps:
 # ...
 - name: azure-disks-delete-disks
-  image: projectnebula/azure-disks-delete-disks
+  image: relaysh/azure-disks-step-disk-delete
   spec:
     azure:
       connection: !Connection { type: azure, name: my-azure-account }

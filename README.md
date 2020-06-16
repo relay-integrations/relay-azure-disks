@@ -8,8 +8,8 @@ The following are supported actions:
 
 |   Type    |  Name              |
 |-----------|--------------------|
-| Step      | [azure-disks-delete-disks](/steps/azure-disks-delete-disks)  | 
-| Step      | [azure-disks-list-disks](/steps/azure-disks-list-disks)  | 
+| Step      | [azure-disks-step-disk-delete](/steps/azure-disks-step-disk-delete)  | 
+| Step      | [azure-disks-step-disk-list](/steps/azure-disks-step-disk-list)  | 
 
 
 ## Contributing

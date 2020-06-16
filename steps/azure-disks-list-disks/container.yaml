@@ -1,6 +1,0 @@
-apiVersion: container/v1
-kind: StepContainer
-inherit: ../hack/defs/azure-python
-title: List Azure Disks by SubscriptionId
-description: >
-  This task describes the Azure Disks in a given SubscriptionId.
