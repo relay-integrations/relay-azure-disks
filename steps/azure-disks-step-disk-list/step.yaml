@@ -1,6 +1,6 @@
 apiVersion: integration/v1
 kind: Step
-name: azure-disks-step-disk-delete
+name: azure-disks-step-disk-list
 version: 1
 summary: Step template
 
@@ -10,3 +10,6 @@ description: |
 build:
   apiVersion: build/v1
   kind: Docker
+
+publish:
+  repository: relaysh/azure-disks-step-disk-list
