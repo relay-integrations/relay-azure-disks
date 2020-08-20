@@ -2,10 +2,10 @@ apiVersion: integration/v1
 kind: Step
 name: azure-disks-step-disk-delete
 version: 1
-summary: Step template
+summary: Delete disks
 
 description: |
-  This is a template for a simple step.
+  This step container deletes a set of Azure disks in an Azure subscription given a list of resource IDs.
 
 build:
   apiVersion: build/v1
