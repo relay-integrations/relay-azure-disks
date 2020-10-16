@@ -18,3 +18,16 @@ schemas:
   spec:
     source: file
     file: spec.schema.json
+
+examples:
+- summary: Delete Azure disk
+  content:
+    apiVersion: v1
+    kind: Step
+    name: azure-disks-delete-disk
+    image: relaysh/azure-disks-step-disk-delete
+    spec:
+      azure:
+        connection: !Connection { type: azure, name: my-azure-account }
+      resourceIDs:
+      - !Parameter resourceID
