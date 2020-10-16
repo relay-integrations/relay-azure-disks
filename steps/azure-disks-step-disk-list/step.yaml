@@ -21,3 +21,15 @@ schemas:
   output:
     source: file
     file: output.schema.json 
+
+examples:
+- summary: List Azure disks
+  content:
+    apiVersion: v1
+    kind: Step
+    name: azure-disks-list-disks
+    image: relaysh/azure-disks-step-disk-list
+    spec:
+      azure:
+        connection: !Connection { type: azure, name: my-azure-account }
+      resourceGroup: !Parameter resourceGroup
