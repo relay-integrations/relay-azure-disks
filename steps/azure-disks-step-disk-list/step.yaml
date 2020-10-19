@@ -2,7 +2,7 @@ apiVersion: integration/v1
 kind: Step
 name: azure-disks-step-disk-list
 version: 1
-summary: List Azure disks
+summary: List disks
 
 description: |
   This step container lists the disks in an Azure subscription or resource group and sets an output, disks, to an array of disks objects.
