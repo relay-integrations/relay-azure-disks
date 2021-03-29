@@ -2,7 +2,7 @@
 
 from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.compute import ComputeManagementClient
-from nebula_sdk import Interface, Dynamic as D
+from relay_sdk import Interface, Dynamic as D
 
 relay = Interface()
 
