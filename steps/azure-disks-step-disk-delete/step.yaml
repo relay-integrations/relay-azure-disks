@@ -4,8 +4,7 @@ name: azure-disks-step-disk-delete
 version: 1
 summary: Delete disks
 
-description: |
-  This step container deletes a set of Azure disks in an Azure subscription given a list of resource IDs.
+description: Deletes a set of Azure disks.
 
 build:
   apiVersion: build/v1
