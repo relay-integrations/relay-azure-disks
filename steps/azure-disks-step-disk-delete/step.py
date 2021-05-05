@@ -1,15 +1,18 @@
 #!/usr/bin/env python
 
-from azure.common.credentials import ServicePrincipalCredentials
+from azure.identity import ClientSecretCredential
 from azure.mgmt.compute import ComputeManagementClient
 from relay_sdk import Interface, Dynamic as D
+import logging
+
+logging.basicConfig(level=logging.WARNING)
 
 relay = Interface()
 
-credentials = ServicePrincipalCredentials(
+credentials = ClientSecretCredential(
     client_id=relay.get(D.azure.connection.clientID),
-    secret=relay.get(D.azure.connection.secret),
-    tenant=relay.get(D.azure.connection.tenantID)
+    client_secret=relay.get(D.azure.connection.secret),
+    tenant_id=relay.get(D.azure.connection.tenantID)
 )
 subscription_id=relay.get(D.azure.connection.subscriptionID)
 compute_client = ComputeManagementClient(credentials, subscription_id)
@@ -37,7 +40,7 @@ for resource_id in resource_ids:
   resource_group_name = resource_id.split('/')[4] # Resource group name
   disk_name = resource_id.split('/')[8] # VM name
   print('Deleting Azure Disk {0} in Resource Group {1}'.format(disk_name, resource_group_name))  
-  async_disk_operation = compute_client.disks.delete(resource_group_name, disk_name)
+  async_disk_operation = compute_client.disks.begin_delete(resource_group_name, disk_name)
   disk_handle_list.append(async_disk_operation)
 
 
